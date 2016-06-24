@@ -1,0 +1,21 @@
+<h1>User Details</h1>
+<% if user_signed_in? %>
+<tr>
+  <td>Full Name: <b><%=full_name %></b></td><br/>
+  <td>Email: <b><%= current_user.email%></b></td><br>
+  <td>Sing In Count: <b><%= current_user.sign_in_count%></b></td><br/>
+  <td>current_sign_in_at: <b><%= current_user.current_sign_in_at%></b></td><br/>
+  <td>last_sign_in_at: <b><%= current_user.last_sign_in_at%></b></td><br/>
+  <td>current_sign_in_ip: <b><%= current_user.current_sign_in_ip%></b></td><br/>
+  <td>last_sign_in_ip: <b><%= current_user.last_sign_in_ip%></b></td><br/>
+  <td>confirmation_token: <b><%= current_user.confirmation_token%></b></td><br/>
+  <td>confirmed_at: <b><%= current_user.confirmed_at%></b></td><br/>
+  <td>confirmation_sent_at: <b><%= current_user.confirmation_sent_at%></b></td><br/>
+  <td>unconfirmed_email: <b><%= current_user.unconfirmed_email%></b></td><br/>
+  <td>failed_attempts: <b><%= current_user.failed_attempts%></b></td><br/>
+  <td>unlock_token: <b><%= current_user.unlock_token%></b></td><br/>
+  <td>locked_at: <b><%= current_user.locked_at%></b></td><br/>
+  <td>created_at: <b><%= current_user.created_at%></b></td><br/>
+  <td>updated_at: <b><%= current_user.updated_at%></b></td><br/>
+</tr>
+<%end %>
