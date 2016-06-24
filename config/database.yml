@@ -17,6 +17,7 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
@@ -80,6 +81,11 @@ test:
 #
 production:
   <<: *default
+  # database: DeviseDemo_production
+  # username: DeviseDemo
+  # password: <%= ENV['PG_DATABASE_PASSWORD'] %>
+
   database: DeviseDemo_production
-  username: DeviseDemo
-  password: <%= ENV['PG_DATABASE_PASSWORD'] %>
+  pool: 5
+  # username: sanjay  
+  # password: sanjay
