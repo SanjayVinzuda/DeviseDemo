@@ -1,6 +1,12 @@
 <h1>User Details</h1>
 <% if user_signed_in? %>
 <tr>
+  <td>
+  <% if current_user %>
+      <%= image_tag(current_user.largeimage)%>
+  <% end %>
+  </td><br/>
+
   <td>Full Name: <b><%=full_name %></b></td><br/>
   <td>Email: <b><%= current_user.email%></b></td><br>
   <td>Sing In Count: <b><%= current_user.sign_in_count%></b></td><br/>
